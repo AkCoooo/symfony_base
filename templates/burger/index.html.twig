@@ -1,0 +1,15 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Liste Burgers{% endblock %}
+
+{% block body %}
+    <h1>Liste des burgers</h1>
+        {% for burger in burgers %}
+            <ul>
+                <li>{{ burger.name }}</li>
+                <li>{{ burger.price }}</li>
+                <li>{{ burger.description }}</li>
+            </ul>
+        {% endfor %}
+        <a href="{{ path("app_test")}}">Retour Accueil</a>
+{% endblock %}
